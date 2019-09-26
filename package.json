@@ -1,0 +1,47 @@
+{
+  "name": "menuville",
+  "version": "1.0.0",
+  "description": "a seamless menu for small and medium restaurants",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nzibosco/menuville.git"
+  },
+  "keywords": [
+    "inventory",
+    "free"
+  ],
+  "author": "Bosco Nzeyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nzibosco/menuville/issues"
+  },
+  "homepage": "https://github.com/Nzibosco/menuville#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bcrypt-nodejs": "0.0.3",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "if-env": "^1.0.4",
+    "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "react-moment": "^0.9.2",
+    "sequelize": "^5.10.1"
+  }
+}
