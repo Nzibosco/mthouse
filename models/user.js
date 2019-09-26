@@ -43,6 +43,10 @@ module.exports = function(sequelize, DataTypes) {
     country: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    Photo: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   });
 
