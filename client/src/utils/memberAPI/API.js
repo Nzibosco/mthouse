@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   // Gets all
-  getAll: () => {
+  getMembers: () => {
     return axios.get("/api/event");
   },
   // Gets 1 with the given id
@@ -14,7 +14,7 @@ export default {
     return axios.delete("/api/event/" + id);
   },
   // Saves to the database
-  saveOne: function(data) {
+  saveMember: function(data) {
     return axios.post("/api/event", data);
   }
 };
