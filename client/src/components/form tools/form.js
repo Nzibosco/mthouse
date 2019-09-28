@@ -11,7 +11,7 @@ export function FormRow (props) {
 
 export function Input(props) {
   return (
-    <div className= {props.colspecs ? props.colspecs: "form-group"} {...props}>
+    <div className= {props.colspecs ? props.colspecs: "form-group col-sm-6"} {...props}>
       <label forhtml = {props.id}>{props.labeltext}</label>
       <input className="form-control" {...props} />
     </div>
