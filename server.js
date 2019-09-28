@@ -29,7 +29,7 @@ app.use(routes);
 
 // seed the database with initial data
 var db = require("./models");
-var menuSeeds = require("./scripts/seedDB.json");
+// var menuSeeds = require("./scripts/seedDB.json");
 
 var syncOptions = { force: false };
 
