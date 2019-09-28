@@ -61,7 +61,7 @@ class Member extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        if (this.state.firstname && this.state.lastname && this.state.email && this.state.streetAddress && this.state.phone && this.state.city) {
+        if (this.state.firstName && this.state.lastName && this.state.email && this.state.streetAddress && this.state.phone && this.state.city) {
             API.saveMember({
                 firstName: this.state.firstName,
                 lastName: this.state.lastName,
@@ -124,7 +124,7 @@ class Member extends Component {
                 onChange={this.handleInputChange} />
         </FormRow>
         <FormBtn type="submit" btndetails={"btn btn-success"}
-            disabled={!(this.state.firstname && this.state.lastname && this.state.email && this.state.streetAddress && this.state.phone && this.state.city)}
+            disabled={!(this.state.firstName && this.state.lastName && this.state.email && this.state.streetAddress && this.state.phone && this.state.city)}
             onClick={this.handleFormSubmit}>Submit</FormBtn>
     </form>
 </div>  
@@ -166,4 +166,4 @@ class Member extends Component {
 //     <h3>No Results to Display</h3>
 //   )}
 
-export default Menu;
+export default Member;

@@ -3,18 +3,18 @@ import axios from "axios";
 export default {
   // Gets all
   getMembers: () => {
-    return axios.get("/api/event");
+    return axios.get("/api/member");
   },
   // Gets 1 with the given id
   getById: function(id) {
-    return axios.get("/api/event/" + id);
+    return axios.get("/api/member/" + id);
   },
   // Deletes with the given id
   deleteOne: function(id) {
-    return axios.delete("/api/event/" + id);
+    return axios.delete("/api/member/" + id);
   },
   // Saves to the database
-  saveMember: function(data) {
-    return axios.post("/api/event", data);
+  saveMember: function(memberData) {
+    return axios.post("/api/member", memberData);
   }
 };

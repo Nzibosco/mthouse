@@ -16,7 +16,7 @@ function Home() {
             <Row>
                 <Col size = "md-12">
                     <Jumbotron>
-                       <a className = "display-4" href = "/members">Go to dashboard</a>
+                       <a className = "display-4" href = "/member">Go to dashboard</a>
                     </Jumbotron>
                 </Col>
             </Row>

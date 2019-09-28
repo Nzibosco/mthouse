@@ -12,7 +12,7 @@ return (
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/members" component={Members} />
+          <Route exact path="/member" component={Members} />
           {/* <Route exact path="/books/:id" component={Detail} /> */}
         </Switch>
       </div>
