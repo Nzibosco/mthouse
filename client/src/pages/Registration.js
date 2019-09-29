@@ -44,6 +44,17 @@ class Registration extends Component {
 //             .catch(err => console.log(err));
 //     };
 
+
+
+// div to show that the member is successfully registered
+success = () => {
+    return (
+        <div className = "jumbotron">
+            <h1>You are successfully registered. <a href= "#"> Go to your account now</a></h1> 
+        </div>
+    )
+}
+
     saveMember = (memberData) => {
         API.saveMember(memberData)
             .then(res => {
@@ -74,7 +85,6 @@ class Registration extends Component {
                 photo: this.state.photo
             })
                 .then(res => {
-                    this.loadMembers();
                     this.setState({
                         firstName: "",
                         lastName: "",
@@ -86,6 +96,10 @@ class Registration extends Component {
                         country: "",
                         photo: ""
                     });
+
+                    {/* empty the div a write member successfully registered */}
+                    this.success;
+
                     console.log(res)})
                 .catch(err => console.log(err));
         }
