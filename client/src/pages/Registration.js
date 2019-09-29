@@ -45,16 +45,6 @@ class Registration extends Component {
 //     };
 
 
-
-// div to show that the member is successfully registered
-success = () => {
-    return (
-        <div className = "jumbotron">
-            <h1>You are successfully registered. <a href= "#"> Go to your account now</a></h1> 
-        </div>
-    )
-}
-
     saveMember = (memberData) => {
         API.saveMember(memberData)
             .then(res => {
@@ -94,11 +84,11 @@ success = () => {
                         city: "",
                         state: "",
                         country: "",
-                        photo: ""
+                        photo: "",
                     });
 
                     {/* empty the div a write member successfully registered */}
-                    this.success;
+                    // this.success();
 
                     console.log(res)})
                 .catch(err => console.log(err));
@@ -110,9 +100,11 @@ success = () => {
             <div className = "jumbotron registration">
 
 {/* form to add a new member */}
+{/* send a success message after successful registration */}
 <div
     id="add-member"
     className="container text center"
+    ref = "add-member"
 >
     <form>
             <Input name="firstName" colspecs="form-group" placeholder="your first name (required)" id="firstname" labeltext="First Name" value={this.state.firstName}
@@ -137,7 +129,7 @@ success = () => {
             disabled={!(this.state.firstName && this.state.lastName && this.state.email && this.state.streetAddress && this.state.phone && this.state.city)}
             onClick={this.handleFormSubmit}>Submit</FormBtn>
     </form>
-</div>  
+</div>
             </div>
         );
     }
