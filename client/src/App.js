@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Members from "./pages/Members";
 import Nav from "./components/nav";
 import Registration from "./pages/Registration"
+import Account from "./pages/account"
 
 
 function App() {
@@ -15,7 +16,7 @@ return (
           <Route exact path="/" component={Home} />
           <Route exact path="/member" component={Members} />
           <Route exact path="/registration" component={Registration} />
-          {/* <Route exact path="/books/:id" component={Detail} /> */}
+          <Route exact path="/member/:id" component={Account} />
         </Switch>
       </div>
     </Router>

@@ -41,8 +41,13 @@ module.exports = {
 
   // Find a user by Id
   findOne: (req, res) => {
+    // first, change the user id to a number
+    var idSent = req.params.id;
+    const id = parseInt(idSent);
+
     db.User
-      .findByPk(req.params.id)
+      // .findByPk(req.params.id)
+      .findByPk(id)
       .then(user => {
         res.send(user);
       })
