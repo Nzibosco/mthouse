@@ -53,11 +53,11 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  // creating a foreign key to link users to events they create
+  // creating a foreign key to link users to contributions they make
   User.associate = function(models) {
-    // Associating Users with Events
-    // When an user is deleted, also delete any associated events
-    User.hasMany(models.Event, {
+    // Associating Users with contributions
+    // When an user is deleted, also delete any associated contribution
+    User.hasMany(models.Contribution, {
       onDelete: "cascade"
     });
   };
