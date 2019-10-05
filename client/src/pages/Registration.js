@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from "react-router-dom";
 import { Input, FormBtn, FormRow, TextArea } from "../components/form tools/form";
 import API from "../utils/memberAPI/API";
 
@@ -87,8 +88,7 @@ class Registration extends Component {
                         photo: "",
                     });
 
-                    {/* empty the div a write member successfully registered */}
-                    // this.success();
+                    <Link to="/success"></Link>
 
                     console.log(res)})
                 .catch(err => console.log(err));
