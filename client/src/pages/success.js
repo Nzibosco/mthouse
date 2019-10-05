@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 
-class Success extends component {
+class Success extends Component {
     // functions for API calls will go here
     // ..... 
 

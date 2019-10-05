@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
+import ReactDOM from "react-dom";
+import { Route, Redirect } from "react-router"
 import { Input, FormBtn, FormRow, TextArea } from "../components/form tools/form";
 import API from "../utils/memberAPI/API";
+import Success from "./success"
 
 class Registration extends Component {
     // setting a state representing customer details
@@ -17,35 +20,7 @@ class Registration extends Component {
         country: "",
         photo: ""
     };
-    //     componentDidMount() {
-    //     this.loadMembers();
-    // };
-
-
-    // loadMembers = () => {
-    //     API.getMembers()
-    //         .then(res =>
-    //             this.setState({ members: res.data })
-    //             //console.log(res.data)
-    //         )
-    //         .catch(err => console.log(err));
-    // };
-
-
-
-//     loadMenu = () => {
-//         API.getMenu()
-//             .then(res => {
-//                 var newData = this.state.dishes.concat([res.data]);  
-// this.setState({dishes: newData})
-//                 // this.setState({ dishes: res, name: "", image: "", detail: "", price: ""});
-//                 console.log(newData);
-//             }
-//             )
-//             .catch(err => console.log(err));
-//     };
-
-
+    
     saveMember = (memberData) => {
         API.saveMember(memberData)
             .then(res => {
@@ -59,6 +34,12 @@ class Registration extends Component {
         this.setState({
             [name]: value
         });
+    };
+
+    success = () => {
+        return (
+                ReactDOM.render(<Success/>, document.getElementById("add-member"))
+        )
     };
 
     handleFormSubmit = event => {
@@ -76,6 +57,7 @@ class Registration extends Component {
                 photo: this.state.photo
             })
                 .then(res => {
+                    this.success();
                     this.setState({
                         firstName: "",
                         lastName: "",
@@ -87,9 +69,6 @@ class Registration extends Component {
                         country: "",
                         photo: "",
                     });
-
-                    <Link to="/success"></Link>
-
                     console.log(res)})
                 .catch(err => console.log(err));
         }
