@@ -29,6 +29,18 @@ module.exports = function(sequelize, DataTypes) {
       bankSlip: {
         type: DataTypes.STRING,
         allowNull: false
+      },
+      dueDate: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      paidOn: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      delay: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       }
     });
 
