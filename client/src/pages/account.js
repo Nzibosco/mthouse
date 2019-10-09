@@ -44,7 +44,7 @@ class Account extends Component {
 
     render() {
         return (
-            <div className = "jumbotron">
+            <div className = "container jumbotron">
                 <h1>{this.state.firstName}</h1>
                 <p className = "lead">{this.state.lastName}</p>
                 <p>{this.state.email}</p>
