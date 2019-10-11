@@ -41,6 +41,10 @@ module.exports = function(sequelize, DataTypes) {
       delay: {
         type: DataTypes.INTEGER,
         allowNull: false
+      },
+      fine: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       }
     });
 
