@@ -14,3 +14,13 @@ import { Route, Redirect } from "react-router";
 import { Input, FormBtn, FormRow, TextArea } from "../components/form tools/form";
 import API from "../utils/memberAPI/API"; 
 
+class Dashboard extends Component {
+
+    state = {};
+
+    render () {
+        return ()
+    }
+}
+
+export default Dashboard;
