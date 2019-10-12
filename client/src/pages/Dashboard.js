@@ -22,7 +22,7 @@ class Dashboard extends Component {
         return (
             <div className = "container">
                 <div className = "row">
-                    <div className = "col-md-12" id= "contribution">
+                    <div className = "Jumbotron col-md-12" id= "contribution">
                         <h1 className = "display">Rwf <span id= "totalContr">00.00</span></h1>
                         <h3 className = "display">Total revenue from member contributions, fines and loans' interests as of today on <span id = "date">...</span></h3>
                     </div>
