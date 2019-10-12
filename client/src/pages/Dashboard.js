@@ -19,7 +19,16 @@ class Dashboard extends Component {
     state = {};
 
     render () {
-        return ()
+        return (
+            <div className = "container">
+                <div className = "row">
+                    <div className = "col-md-12" id= "contribution">
+                        <h1 className = "display">Rwf <span id= "totalContr">00.00</span></h1>
+                        <h3 className = "display">Total revenue from member contributions, fines and loans' interests as of today on <span id = "date">...</span></h3>
+                    </div>
+                </div>
+            </div>
+        )
     }
 }
 
