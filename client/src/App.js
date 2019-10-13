@@ -7,6 +7,7 @@ import Registration from "./pages/Registration";
 import Account from "./pages/account";
 import Success from "./pages/success";
 import Dashboard from "./pages/Dashboard";
+import Accounting from "./pages/Accounting";
 
 
 
@@ -22,6 +23,7 @@ return (
           <Route exact path="/member/:id" component={Account} />
           <Route exact path = "/success" component = {Success}/>
           <Route exact path = "/dashboard" component = {Dashboard}/>
+          <Route exact path = "/accounting" component = {Accounting}/>
         </Switch>
       </div>
     </Router>
