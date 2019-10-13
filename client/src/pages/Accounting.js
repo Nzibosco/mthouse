@@ -14,7 +14,7 @@ class Accounting extends Component {
     render () {
         return (
             <Container>
-                <Jumbotron>
+                <Jumbotron >
                     <h1 className = "display">Accounting Center</h1>
                     <FormBtn>Add Account</FormBtn> 
                     <FormBtn>Record a transaction</FormBtn>
