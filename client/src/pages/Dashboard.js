@@ -23,9 +23,9 @@ class Dashboard extends Component {
                 <div className = "row">
                     <div className="jumbotron col-md-12 text-center" id="contribution">
                         <h1 className="display">Rwf <span id="totalRevenue">00.00</span></h1>
-                            <p className="display">Total revenue from member contributions, fines and loans' interests as of today on <span id="date">...</span></p>
+                        <p className="display">Total revenue from member contributions, fines and loans' interests as of today on <span id="date">...</span></p>
+                        <small className = "bg-dark rounded text-light"><a href="#">Click here to go to the accounting center for accurate <strong>Net Cash Balance</strong></a></small>
                     </div>
-
                 </div>
                 <div className = "row">
                     <div className = "jumbotron col-md-4 text-center">
