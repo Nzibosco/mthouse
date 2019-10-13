@@ -17,10 +17,13 @@ class Accounting extends Component {
                 <Jumbotron >
                     <h1 className = "display">Accounting Center</h1>
                     <FormBtn>Add Account</FormBtn> 
+                    <br></br>
                     <FormBtn>Record a transaction</FormBtn>
                 </Jumbotron>
                 <Row>
                     <Col size = "md-6">
+                        <p><strong>Cash Inflows</strong></p>
+                        <br></br>
                         <table className="table table-striped" id = "inflows">
                             <thead>
                             <tr>
@@ -53,6 +56,7 @@ class Accounting extends Component {
                         </table>
                     </Col>
                     <Col size = "md-6">
+                        <p><strong>Cash outflows</strong></p>
                         <table className="table table-striped" id = "outflows">
                             <thead>
                             <tr>
