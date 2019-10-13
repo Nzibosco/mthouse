@@ -11,6 +11,8 @@ class Accounting extends Component {
 
     state = {};
 
+    // other functions will go here
+
     render () {
         return (
             <Container>
