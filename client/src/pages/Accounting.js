@@ -16,6 +16,8 @@ class Accounting extends Component {
             <Container>
                 <Jumbotron>
                     <h1 className = "display">Accounting Center</h1>
+                    <FromBtn>Add Account</FromBtn> 
+                    <FormBtn>Record a transaction</FormBtn>
                 </Jumbotron>
                 <Row>
                     <Col size = "md-6">
