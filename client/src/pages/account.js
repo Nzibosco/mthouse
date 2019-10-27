@@ -68,7 +68,8 @@ class Account extends Component {
                 <Row>
                     <Col size="sm-6" id="options">
                         {/* include here a warning message that there is contributions or loan repayment due */}
-                        <button type="submit">Pay contribution</button>
+                        <button type="submit">Pay contribution</button> <br/>
+                        <small style = {{color: "red"}}>You have contribution overdue. you will pay Rwf <strong></strong> + <strong id = "fine"></strong> for fine</small>
                     </Col>
                     <Col size = "sm-6">
                         <button type="submit">Apply for a loan</button>
@@ -79,7 +80,7 @@ class Account extends Component {
                     <div className="summary col-sm-12">
                         <h3>Your Account Summary</h3>
                         <br/>
-                        <p>Total contributions: </p>
+                        <p>Total contributions: Rwf <strong id="saving">00.00</strong> <br/><small><a href = "#">See your contribution history</a></small></p>
                         <p>Next contribution due date: </p>
                         <p>Outstanding loan balance: </p>
 
