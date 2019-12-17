@@ -39,21 +39,21 @@ if (process.env.NODE_ENV === 'test') {
   syncOptions.force = false;
 }
 
-// db.sequelize
-// .sync(syncOptions)
-//   .then(function() {
-//       console.log("syncOptions.force: " + syncOptions.force);
-//       if(syncOptions.force === true) {
-//         db.Menu
-//         .bulkCreate(menuSeeds)
-//         .then(function(menuSeed) {
-//             console.log("success seeding menu items " + menuSeed);
-//         })
-//         .catch(err => {
-//             console.log(err);
-//         });
-//     }
-//   });
+db.sequelize
+.sync(syncOptions)
+  .then(function() {
+      console.log("syncOptions.force: " + syncOptions.force);
+    //   if(syncOptions.force === true) {
+    //     db.Menu
+    //     .bulkCreate(menuSeeds)
+    //     .then(function(menuSeed) {
+    //         console.log("success seeding menu items " + menuSeed);
+    //     })
+    //     .catch(err => {
+    //         console.log(err);
+    //     });
+    // }
+  });
   
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

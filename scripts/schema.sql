@@ -1,4 +1,4 @@
 -- Drops the menuville if it exists currently --
-DROP DATABASE IF EXISTS menuville;
+DROP DATABASE IF EXISTS mthouse;
 -- Creates the "todolist" database --
-CREATE DATABASE menuville;
+CREATE DATABASE mthouse;

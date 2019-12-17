@@ -26,10 +26,10 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.INTEGER,
         allowNull: false
       },
-      bankSlip: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
+      // bankSlip: {
+      //   type: DataTypes.STRING,
+      //   allowNull: false
+      // },
       dueDate: {
         type: DataTypes.STRING,
         allowNull: false
@@ -38,14 +38,17 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       },
-      delay: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-      },
-      fine: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-      }
+      /* These are commented out because We can use db info to calculate fine, and delay without necessarily asking the user 
+      The delay and other redundant stuff. 
+      */
+      // delay: {
+      //   type: DataTypes.INTEGER,
+      //   allowNull: false
+      // },
+      // fine: {
+      //   type: DataTypes.INTEGER,
+      //   allowNull: false
+      // }
     });
 
     // foreign key to link contributions to their members. 
