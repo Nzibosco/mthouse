@@ -16,39 +16,43 @@ module.exports = function(sequelize, DataTypes) {
       },
       contribution: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        // allowNull: false
       },
       month: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        // allowNull: false
       },
       year: {
-        type: DataTypes.INTEGER,
-        allowNull: false
+        type: DataTypes.STRING,
+        defaultValue: "2020",
+        allowNull: true
+
       },
-      // bankSlip: {
-      //   type: DataTypes.STRING,
-      //   allowNull: false
-      // },
+      bankSlip: {
+        type: DataTypes.STRING,
+        // allowNull: false
+        allowNull: true
+      },
       dueDate: {
         type: DataTypes.STRING,
-        allowNull: false
+        // allowNull: false
+        allowNull: true
       },
       paidOn: {
         type: DataTypes.STRING,
-        allowNull: false
+        // allowNull: false
+        allowNull: true
       },
-      /* These are commented out because We can use db info to calculate fine, and delay without necessarily asking the user 
-      The delay and other redundant stuff. 
-      */
-      // delay: {
-      //   type: DataTypes.INTEGER,
-      //   allowNull: false
-      // },
-      // fine: {
-      //   type: DataTypes.INTEGER,
-      //   allowNull: false
-      // }
+      delay: {
+        type: DataTypes.INTEGER,
+        // allowNull: false
+        allowNull: true
+      },
+      fine: {
+        type: DataTypes.INTEGER,
+        // allowNull: false
+        allowNull: true
+      }
     });
 
     // foreign key to link contributions to their members. 

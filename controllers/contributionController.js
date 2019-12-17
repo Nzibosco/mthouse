@@ -18,7 +18,8 @@ module.exports = {
         dueDate: req.body.dueDate,
         paidOn: req.body.paidOn,
         delay: req.body.delay,
-        fine: req.body.fine
+        fine: req.body.fine,
+        UserId: req.body.userId
       })
       .then(contribution => {
         // Send created contribution to client
